@@ -1,0 +1,4 @@
+#!/bin/sh
+
+nix build
+cp -f "./result/bin/xmonad" "$1"

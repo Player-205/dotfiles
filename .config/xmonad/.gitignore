@@ -1,0 +1,25 @@
+# files produced by compiler
+*.o
+*.hi
+*.errors
+
+# compiled xmonad executable
+xmonad-*
+
+# files used by stack
+.stack-work/
+
+# directory created by `build` script
+bin/
+
+# files automatically created by xmonad
+xmonad.state
+xmonad.hi
+xmonad.o
+xmonad.errors
+
+dist-newstyle/
+.direnv/
+result
+
+prompt-history

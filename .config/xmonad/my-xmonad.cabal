@@ -1,0 +1,67 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           my-xmonad
+version:        0.0.0
+build-type:     Simple
+
+executable xmonad
+  main-is: Main.hs
+  other-modules:
+      Paths_my_xmonad
+  hs-source-dirs:
+      app
+  default-extensions:
+      AllowAmbiguousTypes
+      ApplicativeDo
+      BlockArguments
+      ConstraintKinds
+      DataKinds
+      DeriveAnyClass
+      DeriveFoldable
+      DeriveFunctor
+      DeriveTraversable
+      DerivingStrategies
+      DerivingVia
+      DuplicateRecordFields
+      EmptyCase
+      FlexibleContexts
+      FlexibleInstances
+      FunctionalDependencies
+      GADTs
+      GeneralizedNewtypeDeriving
+      ImportQualifiedPost
+      KindSignatures
+      LambdaCase
+      MultiParamTypeClasses
+      MultiWayIf
+      NamedFieldPuns
+      OverloadedStrings
+      PatternSynonyms
+      RankNTypes
+      ScopedTypeVariables
+      StandaloneDeriving
+      TemplateHaskell
+      TypeApplications
+      TypeFamilies
+      TypeOperators
+      TypeSynonymInstances
+      UndecidableInstances
+      ViewPatterns
+      QuasiQuotes
+  ghc-options: -Wall -Werror -fno-warn-missing-signatures -threaded -fno-warn-unused-imports
+  build-depends:
+      X11
+    , base
+    , containers
+    , exceptions
+    , mtl
+    , xmonad
+    , xmonad-contrib >= 0.17.0
+    , dbus
+    , unix
+    , utf8-string
+  default-language: Haskell2010

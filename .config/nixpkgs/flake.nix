@@ -56,6 +56,7 @@
                 haskellPackages.hoogle
                 sshfs
                 yadm
+                silicon
               ];
 
               gtk = {

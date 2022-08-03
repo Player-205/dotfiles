@@ -194,7 +194,7 @@ promptKeys =
 
 myStartupHook :: X ()
 myStartupHook = do
-  spawnOnce "polybar -r -c ~/.xmonad/polybar/polybar top"
+  spawnOnce "polybar -r -c ~/.config/xmonad/polybar/polybar top"
   spawnOnce "feh --bg-center ~/wallpapers/wp-arcane.png"
   spawnOnce "greenclip daemon"
   spawnOnOnce (head myWorkspaces) "alacritty"

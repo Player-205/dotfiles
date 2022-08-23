@@ -54,8 +54,12 @@ autocmd('ModeChanged', {
 })
 
 -- neoterm
-map('n', '<Leader>tj', function() vim.fn.execute('bel ' .. vim.v.count ..' Ttoggle') end)
 map('n', '<Leader>tl', function() vim.fn.execute('vert ' .. vim.v.count ..' Ttoggle') end)
+map('n', '<C-j>', function() vim.fn.execute('bel ' .. vim.v.count ..' Ttoggle') end)
+map('i', '<C-j>', function() vim.fn.execute('bel ' .. vim.v.count ..' Ttoggle') end)
+map('t', '<C-j>', function() vim.fn.execute('bel ' .. vim.v.count ..' Ttoggle') end)
+
+map('n', '<Leader>tj', function() vim.fn.execute('bel ' .. vim.v.count ..' Ttoggle') end)
 map('n', '<Leader>tt', function() vim.fn.execute('tab ' .. vim.v.count ..' Ttoggle') end)
 map('i', '<C-s>', '<C-o><Cmd>TREPLSendLine<CR>', { silent = true })
 map('n', '<C-s>', '<Plug>(neoterm-repl-send-line)', { re = true })
@@ -79,6 +83,13 @@ map('n', '<leader>k', vim.lsp.buf.hover, { silent = true })
 map('n', '<leader>a', vim.lsp.buf.code_action, { silent = true })
 map('n', '<leader>e', '<Cmd>TroubleToggle<CR>')
 map('n', '<leader><space>', function() vim.lsp.buf.format { async = true } end, { silent = true })
+
+
+
+map('n', '<C-b>', ':NvimTreeToggle<CR>') 
+map('i', '<C-b>', ':NvimTreeToggle<CR>') 
+map('t', '<C-b>', ':NvimTreeToggle<CR>') 
+
 
 function _G.diff(cmd)
 	local old_buf = vim.api.nvim_get_current_buf()

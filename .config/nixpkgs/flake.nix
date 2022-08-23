@@ -48,7 +48,6 @@
                 ripgrep
                 qbittorrent
                 nixpkgs-fmt
-                easyeffects
                 texlive.combined.scheme-full
                 killall
                 neovim
@@ -57,6 +56,7 @@
                 sshfs
                 yadm
                 silicon
+                libreoffice
               ];
 
               gtk = {
@@ -114,6 +114,7 @@
                     theme = "gruvbox";
                   };
                 };
+                ncmpcpp.enable = true;
               };
 
               services = {
@@ -122,6 +123,17 @@
                   configFile = ./services/dunstrc;
                 };
                 flameshot.enable = true;
+                mpd = {
+                  enable = true;
+                  extraConfig = 
+                  ''
+                  mixer_type "software"
+                  '';
+                  network.startWhenNeeded = true;
+                };
+
+                easyeffects.enable = true;
+
               };
             }
 

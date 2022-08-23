@@ -114,6 +114,11 @@ _G.packer_plugins = {
     path = "/home/player205/.local/share/nvim/site/pack/packer/start/cql-vim",
     url = "https://github.com/elubow/cql-vim"
   },
+  ["direnv.vim"] = {
+    loaded = true,
+    path = "/home/player205/.local/share/nvim/site/pack/packer/start/direnv.vim",
+    url = "https://github.com/direnv/direnv.vim"
+  },
   ["dressing.nvim"] = {
     config = { "\27LJ\2\nW\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\ninput\1\0\0\1\0\1\fenabled\1\nsetup\rdressing\frequire\0" },
     loaded = true,
@@ -193,16 +198,15 @@ _G.packer_plugins = {
     path = "/home/player205/.local/share/nvim/site/pack/packer/start/nvim-luadev",
     url = "https://github.com/bfredl/nvim-luadev"
   },
+  ["nvim-tree.lua"] = {
+    loaded = true,
+    path = "/home/player205/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "https://github.com/kyazdani42/nvim-tree.lua"
+  },
   ["nvim-treesitter"] = {
-    config = { "\27LJ\2\n/\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\20treesitter_conf\frequire\0" },
     loaded = true,
     path = "/home/player205/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
-  },
-  ["nvim-ts-rainbow"] = {
-    loaded = true,
-    path = "/home/player205/.local/share/nvim/site/pack/packer/start/nvim-ts-rainbow",
-    url = "https://github.com/p00f/nvim-ts-rainbow"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
@@ -219,11 +223,6 @@ _G.packer_plugins = {
     path = "/home/player205/.local/share/nvim/site/pack/packer/start/pgsql.vim",
     url = "https://github.com/lifepillar/pgsql.vim"
   },
-  playground = {
-    loaded = true,
-    path = "/home/player205/.local/share/nvim/site/pack/packer/start/playground",
-    url = "https://github.com/nvim-treesitter/playground"
-  },
   ["plenary.nvim"] = {
     loaded = true,
     path = "/home/player205/.local/share/nvim/site/pack/packer/start/plenary.nvim",
@@ -238,6 +237,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/player205/.local/share/nvim/site/pack/packer/start/rust.vim",
     url = "https://github.com/rust-lang/rust.vim"
+  },
+  ["telescope-project.nvim"] = {
+    loaded = true,
+    path = "/home/player205/.local/share/nvim/site/pack/packer/start/telescope-project.nvim",
+    url = "https://github.com/nvim-telescope/telescope-project.nvim"
   },
   ["telescope.nvim"] = {
     config = { "\27LJ\2\n.\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\19telescope_conf\frequire\0" },
@@ -322,7 +326,7 @@ _G.packer_plugins = {
     url = "https://github.com/kshenoy/vim-signature"
   },
   ["vim-silicon"] = {
-    config = { "\27LJ\2\n¢\1\0\0\2\0\4\0\0056\0\0\0009\0\1\0005\1\3\0=\1\2\0K\0\1\0\1\0\6\20window-controls\1\17round-corner\1\14pad-horiz\3\0\rpad-vert\3\0\voutput+/tmp/silicon-{time:%Y-%m-%d%H%M%S}.png\ntheme\16OneHalfDark\fsilicon\6g\bvim\0" },
+    config = { "\27LJ\2\n¢\1\0\0\2\0\4\0\0056\0\0\0009\0\1\0005\1\3\0=\1\2\0K\0\1\0\1\0\6\20window-controls\1\17round-corner\1\14pad-horiz\3\0\rpad-vert\3\0\ntheme\16OneHalfDark\voutput+/tmp/silicon-{time:%Y-%m-%d%H%M%S}.png\fsilicon\6g\bvim\0" },
     loaded = true,
     path = "/home/player205/.local/share/nvim/site/pack/packer/start/vim-silicon",
     url = "https://github.com/segeljakt/vim-silicon"
@@ -361,82 +365,78 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: emmet-vim
-time([[Config for emmet-vim]], true)
-try_loadstring("\27LJ\2\nB\0\0\2\0\4\0\0056\0\0\0009\0\1\0'\1\3\0=\1\2\0K\0\1\0\v<C-y>y\30user_emmet_expandabbr_key\6g\bvim\0", "config", "emmet-vim")
-time([[Config for emmet-vim]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
-try_loadstring("\27LJ\2\n.\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\19telescope_conf\frequire\0", "config", "telescope.nvim")
-time([[Config for telescope.nvim]], false)
--- Config for: vim-illuminate
-time([[Config for vim-illuminate]], true)
-try_loadstring("\27LJ\2\n©\1\0\0\3\0\a\0\v6\0\0\0009\0\1\0)\0012\0=\1\2\0006\0\0\0009\0\1\0005\1\5\0005\2\4\0=\2\6\1=\1\3\0K\0\1\0\21python:blacklist\1\0\0\1\4\0\0\18pythonInclude\20pythonStatement\16pythonAsync!Illuminate_ftHighlightGroups\21Illuminate_delay\6g\bvim\0", "config", "vim-illuminate")
-time([[Config for vim-illuminate]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
-try_loadstring("\27LJ\2\n/\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\20treesitter_conf\frequire\0", "config", "nvim-treesitter")
-time([[Config for nvim-treesitter]], false)
 -- Config for: lightline.vim
 time([[Config for lightline.vim]], true)
 try_loadstring("\27LJ\2\n.\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\19lightline_conf\frequire\0", "config", "lightline.vim")
 time([[Config for lightline.vim]], false)
--- Config for: vim-silicon
-time([[Config for vim-silicon]], true)
-try_loadstring("\27LJ\2\n¢\1\0\0\2\0\4\0\0056\0\0\0009\0\1\0005\1\3\0=\1\2\0K\0\1\0\1\0\6\20window-controls\1\17round-corner\1\14pad-horiz\3\0\rpad-vert\3\0\voutput+/tmp/silicon-{time:%Y-%m-%d%H%M%S}.png\ntheme\16OneHalfDark\fsilicon\6g\bvim\0", "config", "vim-silicon")
-time([[Config for vim-silicon]], false)
--- Config for: vim-atom-dark
-time([[Config for vim-atom-dark]], true)
-try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\28 colorscheme atom-dark \bcmd\bvim\0", "config", "vim-atom-dark")
-time([[Config for vim-atom-dark]], false)
--- Config for: vim-signature
-time([[Config for vim-signature]], true)
-try_loadstring("\27LJ\2\ni\0\0\2\0\4\0\t6\0\0\0009\0\1\0)\1\1\0=\1\2\0006\0\0\0009\0\1\0)\1\1\0=\1\3\0K\0\1\0!SignatureMarkerTextHLDynamic\31SignatureMarkTextHLDynamic\6g\bvim\0", "config", "vim-signature")
-time([[Config for vim-signature]], false)
--- Config for: lsp_lines.nvim
-time([[Config for lsp_lines.nvim]], true)
-try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14lsp_lines\frequire\0", "config", "lsp_lines.nvim")
-time([[Config for lsp_lines.nvim]], false)
 -- Config for: vim-gh-line
 time([[Config for vim-gh-line]], true)
 try_loadstring("\27LJ\2\nè\1\0\0\3\0\6\0\n6\0\0\0'\2\1\0B\0\2\2\15\0\0\0X\1\4Ä6\0\2\0009\0\3\0'\1\5\0=\1\4\0K\0\1\0=c() { echo -n \"$@\" | xclip -i -selection clipboard }; c \20gh_open_command\6g\bvim\nxclip\15executable\0", "config", "vim-gh-line")
 time([[Config for vim-gh-line]], false)
--- Config for: neoterm
-time([[Config for neoterm]], true)
-try_loadstring("\27LJ\2\n^\0\0\2\0\5\0\t6\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0)\1\1\0=\1\4\0K\0\1\0\23neoterm_autoinsert\nbelow\24neoterm_default_mod\6g\bvim\0", "config", "neoterm")
-time([[Config for neoterm]], false)
--- Config for: neomake
-time([[Config for neomake]], true)
-try_loadstring("\27LJ\2\n,\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\17neomake_conf\frequire\0", "config", "neomake")
-time([[Config for neomake]], false)
+-- Config for: lsp_lines.nvim
+time([[Config for lsp_lines.nvim]], true)
+try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14lsp_lines\frequire\0", "config", "lsp_lines.nvim")
+time([[Config for lsp_lines.nvim]], false)
+-- Config for: vim-illuminate
+time([[Config for vim-illuminate]], true)
+try_loadstring("\27LJ\2\n©\1\0\0\3\0\a\0\v6\0\0\0009\0\1\0)\0012\0=\1\2\0006\0\0\0009\0\1\0005\1\5\0005\2\4\0=\2\6\1=\1\3\0K\0\1\0\21python:blacklist\1\0\0\1\4\0\0\18pythonInclude\20pythonStatement\16pythonAsync!Illuminate_ftHighlightGroups\21Illuminate_delay\6g\bvim\0", "config", "vim-illuminate")
+time([[Config for vim-illuminate]], false)
 -- Config for: dressing.nvim
 time([[Config for dressing.nvim]], true)
 try_loadstring("\27LJ\2\nW\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\ninput\1\0\0\1\0\1\fenabled\1\nsetup\rdressing\frequire\0", "config", "dressing.nvim")
 time([[Config for dressing.nvim]], false)
--- Config for: nvim-cmp
-time([[Config for nvim-cmp]], true)
-try_loadstring("\27LJ\2\n(\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\rcmp_conf\frequire\0", "config", "nvim-cmp")
-time([[Config for nvim-cmp]], false)
 -- Config for: trouble.nvim
 time([[Config for trouble.nvim]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
 time([[Config for trouble.nvim]], false)
--- Config for: vim-fugitive
-time([[Config for vim-fugitive]], true)
-try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0  command! Gblame Git blame \bcmd\bvim\0", "config", "vim-fugitive")
-time([[Config for vim-fugitive]], false)
+-- Config for: nvim-cmp
+time([[Config for nvim-cmp]], true)
+try_loadstring("\27LJ\2\n(\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\rcmp_conf\frequire\0", "config", "nvim-cmp")
+time([[Config for nvim-cmp]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+try_loadstring("\27LJ\2\n.\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\19telescope_conf\frequire\0", "config", "telescope.nvim")
+time([[Config for telescope.nvim]], false)
+-- Config for: vim-atom-dark
+time([[Config for vim-atom-dark]], true)
+try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\28 colorscheme atom-dark \bcmd\bvim\0", "config", "vim-atom-dark")
+time([[Config for vim-atom-dark]], false)
 -- Config for: fidget.nvim
 time([[Config for fidget.nvim]], true)
 try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\vfidget\frequire\0", "config", "fidget.nvim")
 time([[Config for fidget.nvim]], false)
+-- Config for: vim-signature
+time([[Config for vim-signature]], true)
+try_loadstring("\27LJ\2\ni\0\0\2\0\4\0\t6\0\0\0009\0\1\0)\1\1\0=\1\2\0006\0\0\0009\0\1\0)\1\1\0=\1\3\0K\0\1\0!SignatureMarkerTextHLDynamic\31SignatureMarkTextHLDynamic\6g\bvim\0", "config", "vim-signature")
+time([[Config for vim-signature]], false)
+-- Config for: neoterm
+time([[Config for neoterm]], true)
+try_loadstring("\27LJ\2\n^\0\0\2\0\5\0\t6\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0)\1\1\0=\1\4\0K\0\1\0\23neoterm_autoinsert\nbelow\24neoterm_default_mod\6g\bvim\0", "config", "neoterm")
+time([[Config for neoterm]], false)
 -- Config for: vim-startify
 time([[Config for vim-startify]], true)
 try_loadstring("\27LJ\2\nß\1\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0á\1\t\t\tfunction! StartifyEntryFormat()\n\t\t\t\treturn 'WebDevIconsGetFileTypeSymbol(absolute_path) . \"  \" . entry_path'\n\t\t\tendfunction\n\t\t\t\bcmd\bvim\0", "config", "vim-startify")
 time([[Config for vim-startify]], false)
+-- Config for: vim-silicon
+time([[Config for vim-silicon]], true)
+try_loadstring("\27LJ\2\n¢\1\0\0\2\0\4\0\0056\0\0\0009\0\1\0005\1\3\0=\1\2\0K\0\1\0\1\0\6\20window-controls\1\17round-corner\1\14pad-horiz\3\0\rpad-vert\3\0\ntheme\16OneHalfDark\voutput+/tmp/silicon-{time:%Y-%m-%d%H%M%S}.png\fsilicon\6g\bvim\0", "config", "vim-silicon")
+time([[Config for vim-silicon]], false)
+-- Config for: emmet-vim
+time([[Config for emmet-vim]], true)
+try_loadstring("\27LJ\2\nB\0\0\2\0\4\0\0056\0\0\0009\0\1\0'\1\3\0=\1\2\0K\0\1\0\v<C-y>y\30user_emmet_expandabbr_key\6g\bvim\0", "config", "emmet-vim")
+time([[Config for emmet-vim]], false)
+-- Config for: neomake
+time([[Config for neomake]], true)
+try_loadstring("\27LJ\2\n,\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\17neomake_conf\frequire\0", "config", "neomake")
+time([[Config for neomake]], false)
 -- Config for: nvim-lspconfig
 time([[Config for nvim-lspconfig]], true)
 try_loadstring("\27LJ\2\n(\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\rlsp_conf\frequire\0", "config", "nvim-lspconfig")
 time([[Config for nvim-lspconfig]], false)
+-- Config for: vim-fugitive
+time([[Config for vim-fugitive]], true)
+try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0  command! Gblame Git blame \bcmd\bvim\0", "config", "vim-fugitive")
+time([[Config for vim-fugitive]], false)
 if should_profile then save_profiles() end
 
 end)

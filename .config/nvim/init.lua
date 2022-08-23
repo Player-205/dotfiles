@@ -40,6 +40,15 @@ require('packer').startup(function()
 	use 'ziglang/zig.vim'
 	use { 'zetzit/vim', as = 'zz.vim' }
 	use 'elubow/cql-vim'
+	use 'direnv/direnv.vim'
+	use 'nvim-telescope/telescope-project.nvim'
+	use {
+  		'kyazdani42/nvim-tree.lua',
+  		requires = {
+    		'kyazdani42/nvim-web-devicons', -- optional, for file icons
+  		},
+  		tag = 'nightly' -- optional, updated every week. (see issue #1193)
+	}
 	-- Read .editorconfig
 	use 'editorconfig/editorconfig-vim'
 	-- Linters integration
@@ -225,3 +234,5 @@ autocmd('BufReadPre,FileReadPre', {
 		vim.opt.suffixesadd = { '.lua' }
 	end,
 })
+
+require("nvim-tree").setup()

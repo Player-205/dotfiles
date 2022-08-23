@@ -18,6 +18,7 @@ telescope.setup {
 	}
 }
 telescope.load_extension('hoogle')
+telescope.load_extension('project')
 
 map('n', '<leader>f', builtin.find_files)
 -- Not `g` because of ergonomics; `l` means `lines (in all files)`
@@ -33,3 +34,6 @@ map('n', '<leader>gr', builtin.lsp_references)
 map('n', '<leader>gs', builtin.lsp_document_symbols)
 -- LSP symbols in the project
 map('n', '<leader>ws', builtin.lsp_workspace_symbols)
+
+map('n', '<leader>t', telescope.extensions.project.project)
+

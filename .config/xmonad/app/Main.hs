@@ -145,7 +145,7 @@ appKeys c =
   , ("M-S-<Return>", spawn $ terminal c)
   , ("M-e"         , safeSpawnProg "nautilus"  )
   , ("M-f"         , spawn "firefox"   )
-  , ("M-w"         , spawn "code" )
+  , ("M-w"         , spawn "alacritty -e nvim" )
   ]
 
 screenshotKeys :: [(String, X ())]
@@ -163,7 +163,7 @@ screenshotKeys =
 
 popupKeys :: [(String, X ())]
 popupKeys =
-  [ ("M-o"  , shellPrompt myXPConfig )
+  [ ("M-o"  , spawn "rofi -show drun")
   , ("M-q"  , spawn "xmonad --recompile; xmonad --restart")
   , ("M-S-q", spawn "~/bin/powermenu.sh")
   , ("M-v"  , spawn clipboard)

@@ -50,6 +50,8 @@ import XMonad.Prompt.Input
 import XMonad.Prompt.Shell
 import Data.Foldable
 import XMonad.Layout.Tabbed
+import XMonad.Layout.BorderResize
+import XMonad.Layout.MouseResizableTile
 
 main :: IO ()
 main = do
@@ -195,7 +197,7 @@ promptKeys =
 myStartupHook :: X ()
 myStartupHook = do
   spawnOnce "polybar -r -c ~/.config/xmonad/polybar/polybar top"
-  spawnOnce "feh --bg-center ~/wallpapers/wp-arcane.png"
+  spawnOnce "feh --bg-center --geometry +0+24 ~/wallpapers/arcane_piltover.jpg"
   spawnOnce "greenclip daemon"
   spawnOnOnce (head myWorkspaces) "alacritty"
   spawnOnOnce (myWorkspaces !! 1) "firefox"
@@ -222,6 +224,7 @@ myLayoutHook = avoidStruts
   where
     layout = tiled
          ||| threeColMid
+         ||| mouseResizableTile
          ||| tabbed shrinkText tabConfig
          ||| Grid
          ||| Full
@@ -235,6 +238,7 @@ myLayoutHook = avoidStruts
     nmaster = 1
     ratio = 1 / 2
     delta = 5 / 100
+
 
 myManageHook :: ManageHook
 myManageHook = composeAll $

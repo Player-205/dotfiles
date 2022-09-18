@@ -10,7 +10,7 @@
   outputs = { self, home-manager, nixpkgs }:
     let
       system = "x86_64-linux";
-      username = "player205";
+      username = "rabbit";
       pkgs = import nixpkgs { config = { allowUnfree = true; }; inherit system; };
     in
     {
@@ -28,7 +28,7 @@
                 slack
                 tdesktop
                 nheko
-                rocketchat-desktop
+             #   rocketchat-desktop
                 thunderbird
                 polybar
                 feh
@@ -57,6 +57,10 @@
                 yadm
                 silicon
                 libreoffice
+                lutris
+                wineWowPackages.stagingFull
+                bottles
+                electrum
               ];
 
               gtk = {

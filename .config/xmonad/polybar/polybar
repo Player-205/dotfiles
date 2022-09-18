@@ -108,7 +108,7 @@ label-layout = =<< %layout% >>=
 
 [module/network]
 type = internal/network
-interface = wlp3s0
+interface = eno1
 interval = 3.0
 accumulate-stats = true
 unknown-as-up = true
